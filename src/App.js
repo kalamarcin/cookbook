@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 
 //styles
 import './App.css'
@@ -12,22 +12,12 @@ import Search from './pages/search/Search'
 const App = () => {
 	return (
 		<div className="App">
-			<BrowserRouter>
-				<Switch>
-					<Route path="/">
-						<Home />
-					</Route>
-					<Route path="/create">
-						<Create />
-					</Route>
-					<Route path="search">
-						<Search />
-					</Route>
-					<Route path="/recipe:id">
-						<Recipe />
-					</Route>
-				</Switch>
-			</BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/create" element={<Create />} />
+				<Route path="/search" element={<Search />} />
+				<Route path="/recipe:id" element={<Recipe />} />
+			</Routes>
 		</div>
 	)
 }
