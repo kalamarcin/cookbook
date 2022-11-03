@@ -1,7 +1,8 @@
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 //styles
 import './App.css'
+import Navbar from './components/Navbar'
 
 // page components
 import Create from './pages/create/Create'
@@ -12,6 +13,7 @@ import Search from './pages/search/Search'
 const App = () => {
 	return (
 		<div className="App">
+			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/create" element={<Create />} />
